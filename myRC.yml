@@ -1,0 +1,18 @@
+appVersion: v1
+kind: ReplicationController
+metadata:
+  name: myingnx-rc
+spec:
+  replicas: 3
+  selector:
+    app: myingnx
+  template:
+    metadata:
+      labels:
+        app: myingnx
+    spec:
+      containers:
+        - name: mynginxcontainer
+          image: nginx
+          ports:
+            - containerPort: 80
