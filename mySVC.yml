@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
   - port: 8080
-    nodePort: 30001
+    nodePort: 3001
   selector: 
     app: myjavaapp
     version: 2.6.1
